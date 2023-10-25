@@ -43,7 +43,10 @@ export let scene, camera, renderer, controls, css3dRenderer
     // 设置轨道控制器垂直方向旋转的角度
     controls.minPolarAngle = 0.25 * Math.PI
 
-    // 关闭阻尼效果
+    // 开启阻尼效果
+    controls.enableDamping = true
+
+    // 禁止滚动缩放
     controls.enableZoom = false
 })();
 
@@ -68,9 +71,9 @@ export let scene, camera, renderer, controls, css3dRenderer
 // 坐标轴
 (function createHelper() {
     // 创建坐标轴
-    const axesHelper = new THREE.AxesHelper()
+    // const axesHelper = new THREE.AxesHelper()
     // 将坐标轴添加到场景
-    scene.add(axesHelper)
+    // scene.add(axesHelper)
 })();
 
 // 场景适配
